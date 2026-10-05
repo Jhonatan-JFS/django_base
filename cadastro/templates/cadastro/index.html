@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(circle at top left, rgba(116, 92, 255, 0.35), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(0, 212, 255, 0.25), transparent 35%),
+                linear-gradient(135deg, #10131f, #181c2b, #0d1018);
+
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+
+            padding: 55px 40px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+
+            backdrop-filter: blur(14px);
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.35),
+                0 0 40px rgba(116, 92, 255, 0.08);
+
+            animation: aparecer 0.8s ease;
+        }
+
+        .icone {
+            width: 75px;
+            height: 75px;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 22px;
+
+            font-size: 34px;
+
+            background: linear-gradient(
+                135deg,
+                #745cff,
+                #00bcd4
+            );
+
+            box-shadow:
+                0 10px 30px rgba(116, 92, 255, 0.4);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #bfc7ff,
+                #7ee8fa
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: #b7bfd3;
+            font-size: 1rem;
+            line-height: 1.6;
+
+            margin-bottom: 30px;
+        }
+
+        .botao {
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            text-decoration: none;
+            color: white;
+
+            font-size: 1rem;
+            font-weight: bold;
+
+            border-radius: 12px;
+
+            background: linear-gradient(
+                135deg,
+                #745cff,
+                #4b8cff
+            );
+
+            box-shadow:
+                0 8px 25px rgba(91, 92, 255, 0.35);
+
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            transform: translateY(-3px) scale(1.03);
+
+            box-shadow:
+                0 14px 35px rgba(91, 92, 255, 0.5);
+        }
+
+        .status {
+            margin-top: 35px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 0.9rem;
+            color: #7ddfa8;
+        }
+
+        .status-bolinha {
+            width: 9px;
+            height: 9px;
+
+            background: #55ef9f;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 12px rgba(85, 239, 159, 0.8);
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="icone">
+            🕸️
+        </div>
+
+        <h1>Olá, {{nome}}!</h1>
+
+        <p>Você tem {{idade}}</p>
+
+        <!-- <a href="#" class="botao">
+            Começar
+        </a> -->
+
+        <div class="status">
+            <span class="status-bolinha"></span>
+            Django conectado e funcionando
+        </div>
+
+    </main>
+
+</body>
+</html>
