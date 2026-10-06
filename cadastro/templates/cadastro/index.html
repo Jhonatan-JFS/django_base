@@ -99,6 +99,15 @@
             margin-bottom: 30px;
         }
 
+        h3, ul, li {
+            color: #b7bfd3;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 0;
+
+            margin-bottom: 30px;
+        }
+
         .botao {
             display: inline-block;
 
@@ -194,12 +203,21 @@
         <!-- <a href="#" class="botao">
             Começar
         </a> -->
+        <h3> Minhas Frutas Favoritas:</h3>
+        <ul>
+            {% for fruta in frutas %}
+            <li>{{fruta}}</li>
+            {% endfor %}
+        </ul>
 
         <div class="status">
             <span class="status-bolinha"></span>
             Django conectado e funcionando
         </div>
-
+        
+        <footer>
+            {% block footer %}{% endblock %}
+        </footer>
     </main>
 
 </body>
