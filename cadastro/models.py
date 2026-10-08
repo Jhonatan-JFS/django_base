@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class Pessoa(models.Model):
     nome = models.CharField(max_length=150)
     email = models.EmailField()
@@ -9,3 +7,9 @@ class Pessoa(models.Model):
 
     def __str__(self):
         return self.nome
+    
+class Contato(models.Model):
+    nome = models.CharField(max_length=150)
+    email = models.EmailField()
+    assunto = models.CharField(max_length=150)
+    mensagem = models.CharField()
