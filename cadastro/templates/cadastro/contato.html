@@ -1,8 +1,31 @@
 {% extends 'cadastro/base.html' %}
 
-{% block titulo %}Contato{% endblock %}
+{% block titulo %}Cadastro{% endblock%}
 
 {% block conteudo %}
-    <h1>Faça Contato!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+<section>
+
+    <h2>Faça Contato</h2>
+
+    {% if total == 0 %}
+    
+    <p>Ooops! Cadastre alguém primeiro!</p>
+    
+    {% else %}
+
+    {% for contato in contatos %}
+    <ul>
+        <li>Nome: {{ contato.nome }}</li>
+        <li>E-mail: {{ contato.email }}</li>
+        <li>Assunto: {{ contato.idade }}</li>
+        <li>Mensagem: {{ contato.mensagem }}</li>
+        <li><a href="/contato/{{ contato.id }}">Ver detalhes</a></li>
+    </ul>    
+    {% endfor %}
+
+    {% endif %}
+
+</section>
+
 {% endblock %}
